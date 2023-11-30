@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.6.0
+Name=CAD Assistant
+Exec=/home/kordaz/.local/bin/cad_assistant_1.6.0_2021-10-05_lin64.appimage
+Icon=/home/kordaz/.local/bin/menu-assistant.svg
+X-Icon-Path=/home/kordaz/.local/bin/menu-assistant.svg
+Type=Application
+Categories=GTK;GNOME;Utility;
+Terminal=false
+Comment=STEP and STL Viewer using OPENCASCADE
+StartupWMClass=cad_assistant_1.6.0_2021-10-05_lin64.appimage
+#https://stackoverflow.com/questions/41169528/show-tkinter-window-from-python-script-with-ubuntu-desktop-file
+#xprop | grep WM_CLASS | awk '{print $4}' and click on window
+#~/.local/share/applications
+#❯ ln -s ~/Documents/cfg/cfg-ubu/cad_assistant.desktop .

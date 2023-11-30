@@ -31,6 +31,7 @@ try:
     )
 
     from PyQt5.QtGui import (
+        QKeySequence,
         QImage,
         QPixmap,
         QIcon,
@@ -69,6 +70,7 @@ except:
     )
 
     from PySide6.QtGui import (
+        QKeySequence,
         QAction,
         QImage,
         QPixmap,
@@ -297,6 +299,7 @@ class ControlWidget(QWidget):
         self.btn_rec.setIconSize(self.icon_size)
         self.btn_rec.setEnabled(False)
         self.btn_rec.clicked.connect(self.on_start_recording)
+        self.btn_rec.setShortcut(QKeySequence("Ctrl+R"))
 
         self.btn_stop.setEnabled(False)
         icon = QIcon.fromTheme("media-playback-stop")
@@ -304,6 +307,7 @@ class ControlWidget(QWidget):
         self.btn_stop.setIcon(icon)
         self.btn_stop.setIconSize(self.icon_size)
         self.btn_stop.clicked.connect(self.on_stop_recording)
+        self.btn_stop.setShortcut(QKeySequence("Ctrl+S"))
 
         self.edt_id = e1 = QLineEdit()
         e1.setMaxLength(3)
@@ -558,7 +562,7 @@ class Recorder(QWidget):
 
 class MainWindow(QMainWindow):
     company = "cinvestav"
-    use_webcam = False
+    use_webcam = True
 
     def __init__(self, appname):
         super().__init__()
